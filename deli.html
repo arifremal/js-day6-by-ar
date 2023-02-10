@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Even delgate</title>
+</head>
+<body>
+    <h1>Explore Event Delegdte</h1>
+    <section>
+        <ul id="list-container">
+            <li class="item">Lorem, ipsum dolor.</li>
+            <li class="item">Autem, labore assumenda.</li>
+            <li class="item">Consequatur, hic perferendis!</li>
+            <li class="item">Eius, id neque.</li>
+            <li class="item">Dicta, omnis tempora.</li>
+            <li class="item">A, dolor veritatis!</li>
+        </ul>
+        <button id="add-btn">Added</button>
+    </section>
+    <script>
+       const item= document.getElementsByClassName('item')
+      for (const it of item){
+        it.addEventListener('click', function(event){
+            // console.log(event.target.parentNode);
+            event.target.parentNode.removeChild(event.target)
+        })
+      }
+      document.getElementById('add-btn').addEventListener('click',function(){
+        const listContainer = document.getElementById('list-container');
+        const li = document.createElement('li');
+        li.innerText= 'new item added';
+        li.classList.add =('item')
+        listContainer.appendChild(li)
+
+      })
+    </script>
+    
+</body>
+</html>
