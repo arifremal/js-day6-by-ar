@@ -4,9 +4,43 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>summary</title>
 </head>
 <body>
+    <h1>Finall</h1>
+    <h3 id="handeler">Defaultt text</h3>
+    <h1 id="display">default text</h1>
+    <input id="input-field" type="text"> 
+    <button id="btn-update">update</button>
+    <br>
+    <br>
+
+    <button onclick="handle()" >Add on click function by event</button>
+    <button id="lisener" >by addevenlisener</button>
+    <script>
+        function handle(){
+            const nilam = document.getElementById('handeler')
+            nilam.innerText= 'change bro change'
+        }
+
+        document.getElementById('lisener').addEventListener('click', function(){
+            
+            const another = document.getElementById('handeler');
+            handeler.innerText= 'change ny ar'
+
+        })
+
+        document.getElementById('btn-update').addEventListener('click', function(){
+            const input = document.getElementById('input-field')
+            const inputText = input.value;
+            const p = document.getElementById('display')
+            p.innerText= inputText
+            input.value= ' '
+
+            
+            
+        })
+    </script>
     
 </body>
 </html>
