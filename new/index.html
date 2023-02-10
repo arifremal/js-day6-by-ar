@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div id="container">
+      <h1>add comment</h1>
+      <p>
+        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quas, illum
+        totam delectus iusto repellat perspiciatis quod, minus magni reiciendis
+        quisquam exercitationem, recusandae ipsum vero sequi.
+      </p>
+      <p>
+        Magnam harum pariatur architecto quibusdam. Voluptatem illum totam
+        possimus reprehenderit est eos recusandae mollitia quisquam officiis
+        vero libero earum reiciendis, culpa magni rem accusantium laborum.
+      </p>
+      <p>
+        Laboriosam tempora asperiores architecto consequatur officia incidunt
+        eligendi dolor velit? Magni adipisci cupiditate vel! Reiciendis eligendi
+        praesentium a cumque quam recusandae maxime, veniam deserunt quia.
+      </p>
+    </div>
+    <div>
+      <textarea name="" id="new-comment" cols="60" rows="5"></textarea><br />
+      <button id="btn-post">Post</button>
+    </div>
+    <script>
+      // step01: add evenlisener done
+      document
+        .getElementById("btn-post")
+        .addEventListener("click", function () {
+             // step: get comment inside the textarea 
+
+          const commentBox = document.getElementById("new-comment");
+          const newComment = commentBox.value;
+        //   console.log(newComment);
+
+        //   set the comment inside the comment container
+        const comeentContainer = document.getElementById('container');
+        const para = document.createElement('para')
+        para.innerText= newComment
+        comeentContainer.appendChild(para);
+        // clear
+        commentBox.value = ' ';
+         
+
+        });
+     
+    </script>
+  </body>
+</html>
